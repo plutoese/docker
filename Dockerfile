@@ -17,4 +17,6 @@ RUN pip3 install ipython
 RUN pip3 install notebook
 RUN npm install -g configurable-http-proxy
 RUN pip3 install jupyterhub
-EXPOSE 8000 
+ADD requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt  
+EXPOSE 8000
